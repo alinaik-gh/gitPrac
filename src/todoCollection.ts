@@ -11,7 +11,9 @@ export class TodoCollection {
         this.todoItems.push(new TodoItem(this.nextId, task));
         return this.nextId;
     }
-getTodoById(id: number) : TodoItem {
+
+
+    getTodoById(id: number) : TodoItem {
             return this.todoItems.find(item => item.id === id);
         }
         markComplete(id: number, complete: boolean) {
@@ -20,4 +22,5 @@ getTodoById(id: number) : TodoItem {
                 todoItem.complete = complete;
             }
         }
-    }
+    
+ }
